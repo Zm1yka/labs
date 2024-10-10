@@ -1,7 +1,5 @@
 package lab2;
 
-import lab2.Phone;
-
 import java.util.Scanner;
 
 public class Main {
@@ -12,10 +10,10 @@ public class Main {
     		
     		if (phones != null) {
     			System.out.println("Абоненти з часом міських розмов більше заданого:");
-    			printLocalCallsExceeding(phones, 100);
+    			printLocalCalls(phones, 100);
         
         		System.out.println("\nАбоненти, які користувались міжміським зв'язком:");
-        		printLongDistanceUsers(phones);
+        		printLongDistance(phones);
         
         		System.out.println("\nАбоненти з балансом рахунку в діапазоні:");
         		printAccountInRange(phones, "100", "300");
@@ -70,15 +68,15 @@ public class Main {
     	return phones;
     }
     
-    public static void printLocalCallsExceeding(Phone[] phones, int limit) {
+    public static void printLocalCalls(Phone[] phones, int limit) {
         for (int i = 0; i < phones.length; i++) {
             if (phones[i].getLocalCallDuration() > limit) {
                 System.out.println(phones[i]);
             }
         }
     }
-    
-    public static void printLongDistanceUsers(Phone[] phones) {
+     
+    public static void printLongDistance(Phone[] phones) {
         for (int i = 0; i < phones.length; i++) {
             if (phones[i].getLongDistanceCallDuration() > 0) {
                 System.out.println(phones[i]);
