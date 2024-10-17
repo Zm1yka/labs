@@ -65,7 +65,7 @@ public class Console {
         System.out.println("1. Battle Droid");
         System.out.println("2. Support Droid");
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume the newline
+        scanner.nextLine(); 
 
         System.out.print("Введіть ім'я дроїда: ");
         String name = scanner.nextLine();
