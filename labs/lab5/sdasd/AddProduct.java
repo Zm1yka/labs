@@ -1,4 +1,4 @@
-package console;
+package sdasd;
 
 public class AddProduct implements Command {
     @Override

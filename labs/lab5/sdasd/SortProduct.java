@@ -1,4 +1,4 @@
-package console;
+package sdasd;
 
 public class SortProduct implements Command {
     @Override

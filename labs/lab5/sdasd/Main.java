@@ -1,4 +1,4 @@
-package console;
+package sdasd;
 
 import java.util.Scanner;
 

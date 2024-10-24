@@ -11,7 +11,13 @@ public class SupportDroid extends Droid {
         enemy.takeDamage(damage);
         System.out.println(enemy.getName() + " тепер має " + enemy.getHealth() + " здоров'я.");
     }
-
+    
+    public void heal(Droid ally) {
+    	int healHp = 15;
+    	ally.health += healHp;
+    	System.out.println(name + " лікує " + ally.getName() + " на " + healHp + " здоров'я.");
+    }
+    
 	@Override
 	public int getDamage() {
 		return damage;
