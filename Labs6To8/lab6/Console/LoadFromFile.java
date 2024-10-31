@@ -5,13 +5,15 @@ import coffee.BeanCoffee;
 import coffee.GroundCoffe;
 import coffee.InstantCoffee;
 import coffee.CoffeeTypes;
-
+import logging.LogManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class LoadFromFile implements Command {
     private CoffeeTruck coffeeTruck;
+    private static final Logger logger = LogManager.getLogger();
 
     public LoadFromFile(CoffeeTruck coffeeTruck) {
         this.coffeeTruck = coffeeTruck;
@@ -27,12 +29,13 @@ public class LoadFromFile implements Command {
                 coffeeTruck.addProduct(product);
             }
             System.out.println("Продукти завантажені з файлу.");
+            logger.info("Продукти успішно завантажені з файлу.");
         } catch (IOException e) {
-            System.out.println("Помилка під час зчитування файлу.");
-            e.printStackTrace();
+            logger.severe("Помилка під час зчитування файлу.");
+            LogManager.logCriticalError("Помилка під час зчитування файлу", e);
         }
     }
-
+    
     private CoffeeTypes parseProduct(String line) {
         String[] parts = line.split(", ");
         String coffeeType = parts[0].split(":")[0].trim();

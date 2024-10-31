@@ -10,5 +10,8 @@
 	<classpathentry kind="src" path="lab5"/>
 	<classpathentry kind="src" path="lab6"/>
 	<classpathentry kind="src" path="Test"/>
+	<classpathentry kind="lib" path="C:/Users/Maxx/Downloads/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Maxx/Downloads/jakarta.activation-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Maxx/Downloads/jakarta.activation-1.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

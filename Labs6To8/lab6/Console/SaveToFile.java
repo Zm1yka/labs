@@ -14,7 +14,7 @@ public class SaveToFile implements Command {
 
     @Override
     public void execute() {
-        try (FileWriter writer = new FileWriter("C:\\\\Users\\\\Maxx\\\\Desktop\\\\pp\\\\lab6.txt")) {  
+        try (FileWriter writer = new FileWriter("C:\\Users\\Maxx\\Desktop\\pp\\lab6.txt")) {  
             for (CoffeeTypes product : coffeeTruck.getProducts()) {
                 writer.write(product.toString() + "\n"); 
             }
