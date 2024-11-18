@@ -50,7 +50,7 @@ public class LogManager {
 
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-                return new javax.mail.PasswordAuthentication(from, "под від gmail");
+                return new javax.mail.PasswordAuthentication(from, "пароль від gmail");
             }
         });
 
