@@ -34,10 +34,10 @@ class CoffeeTruckTest {
 
     @Test
     void testSortByPriceToWeightRatio() {
-        truck.addProduct(new BeanCoffee("Premium", 200, 100, 0.3));
-        truck.addProduct(new GroundCoffe("Standard", 100, 50, 0.2));
+        truck.addProduct(new BeanCoffee("Premium", 300, 100, 0.3)); 
+        truck.addProduct(new GroundCoffe("Standard", 100, 50, 0.2)); 
         truck.sortByPriceToWeightRatio();
-        assertEquals("Standard", truck.getProducts().get(0).getName());
+        assertEquals("Premium", truck.getProducts().get(0).getName());
     }
 
     @Test

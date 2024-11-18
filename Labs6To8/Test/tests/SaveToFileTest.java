@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 class SaveToFileTest {
     private CoffeeTruck truck;
     private SaveToFile saveToFileCommand;
-    private final String testFilePath = "test_lab6.txt";
+    private final String testFilePath = "C:\\Users\\Maxx\\Desktop\\pp\\lab6.txt";
 
     @BeforeEach
     void setUp() {

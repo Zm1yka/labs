@@ -4,7 +4,6 @@ import coffee.CoffeeTypes;
 import logging.LogManager;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 

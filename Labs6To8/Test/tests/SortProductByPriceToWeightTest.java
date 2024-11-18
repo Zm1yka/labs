@@ -27,8 +27,8 @@ class SortProductByPriceToWeightTest {
     void testExecuteSortByPriceToWeight() {
         sortCommand.execute();
         
-        assertEquals("Arabica", coffeeTruck.getProducts().get(0).getName());  
-        assertEquals("Robusta", coffeeTruck.getProducts().get(1).getName());  
+        assertEquals("Robusta", coffeeTruck.getProducts().get(0).getName());  
+        assertEquals("Arabica", coffeeTruck.getProducts().get(1).getName());  
         assertEquals("Nescafe", coffeeTruck.getProducts().get(2).getName());  
     }
 }

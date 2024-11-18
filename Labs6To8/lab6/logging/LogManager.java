@@ -40,8 +40,8 @@ public class LogManager {
     }
 
     private static void sendEmailAlert(String message, Throwable throwable) {
-        String to = "vivabiba1337@gmail.com";
-        String from = "maxkalan2006@gmail.com";
+        String to = "пошта адресата";
+        String from = "пошта адресанта";
         Properties properties = System.getProperties();
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
@@ -50,7 +50,7 @@ public class LogManager {
 
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-                return new javax.mail.PasswordAuthentication(from, "ejbw nibq wubj owww"); // Введіть пароль програми;
+                return new javax.mail.PasswordAuthentication(from, "под від gmail");
             }
         });
 

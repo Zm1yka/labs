@@ -40,9 +40,11 @@ public class LoadFromFile implements Command {
         String[] parts = line.split(", ");
         String coffeeType = parts[0].split(":")[0].trim();
 
-        double weight = Double.parseDouble(parts[1].split(": ")[1].replaceAll("[^\\d,]", "").replace(",", "."));
-        double price = Double.parseDouble(parts[2].split(": ")[1].replaceAll("[^\\d,]", "").replace(",", "."));
-        double volume = Double.parseDouble(parts[3].split(": ")[1].replaceAll("[^\\d,]", "").replace(",", "."));
+        double weight = Double.parseDouble(parts[1].split(": ")[1].replace(",", ".").replaceAll("[^\\d.]", ""));
+        double price = Double.parseDouble(parts[2].split(": ")[1].replace(",", ".").replaceAll("[^\\d.]", ""));
+        double volume = Double.parseDouble(parts[3].split(": ")[1].replace(",", ".").replaceAll("[^\\d.]", ""));
+
+        System.out.println("Вага: " + weight + ", ціна: " + price + ", об'єм: " + volume);
 
         switch (coffeeType) {
             case "Зернова кава":
